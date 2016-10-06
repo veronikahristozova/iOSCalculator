@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="z2i-JQ-wRb" userLabel="Calc">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="z2i-JQ-wRb" userLabel="Calc">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="dq5-k4-VNX">
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -27,7 +27,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cWp-97-See" userLabel="Calculator">
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cWp-97-See" userLabel="Calculator">
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JDj-bx-9Cp" userLabel="BothFirstRow">
                                                 <subviews>
@@ -232,10 +232,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gdG-f0-ied" firstAttribute="top" secondItem="z2i-JQ-wRb" secondAttribute="bottom" constant="8" symbolic="YES" id="bL3-8p-MSx"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="z2i-JQ-wRb" secondAttribute="leading" id="fJc-z2-VSI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="z2i-JQ-wRb" secondAttribute="trailing" id="lEV-Gk-bz1"/>
-                            <constraint firstItem="z2i-JQ-wRb" firstAttribute="top" secondItem="6iQ-yl-EYV" secondAttribute="bottom" constant="8" symbolic="YES" id="ogj-Wo-IHn"/>
+                            <constraint firstItem="z2i-JQ-wRb" firstAttribute="leading" secondItem="bD4-AZ-Xwq" secondAttribute="leadingMargin" id="IpJ-I5-Ut8"/>
+                            <constraint firstItem="z2i-JQ-wRb" firstAttribute="trailing" secondItem="bD4-AZ-Xwq" secondAttribute="trailingMargin" id="ZGd-ER-uUz"/>
+                            <constraint firstItem="z2i-JQ-wRb" firstAttribute="top" secondItem="6iQ-yl-EYV" secondAttribute="bottom" constant="5" id="hfa-nx-weT"/>
+                            <constraint firstItem="gdG-f0-ied" firstAttribute="top" secondItem="z2i-JQ-wRb" secondAttribute="bottom" constant="8" symbolic="YES" id="yUJ-Ld-BZt"/>
                         </constraints>
                     </view>
                     <connections>
