@@ -10,36 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    
-    
-    
     @IBOutlet weak var display: UILabel!
     
     var userIsInTheMiddleOfTyping = false
-    
+    var dotTypped = false
     
     @IBAction func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
-        if userIsInTheMiddleOfTyping {
-            let currentlyInDislay = display.text!
-            display.text = currentlyInDislay + digit
-        } else {
-            display!.text = digit
-        }
+        if userIsInTheMiddleOfTyping { displayValue.appendDigit(digit: dotTypped ? ".\(digit)" : digit) }
+        else { displayValue = Double(digit) ?? 0 }
         userIsInTheMiddleOfTyping = true
+        dotTypped = digit == "."
     }
     
-    var displayValue : Double  {
-        get {
-            return Double(display.text!)!
-        }
-        set {
-            let a = newValue.truncatingRemainder(dividingBy: 1) == 0 ? String(Int(newValue)) : String(newValue)
-            
-            display.text = a
-        }
-    }
+    var displayValue : Double = 0 { didSet { display.text = displayValue.decimalFormatted } }
     
     var savedProgram: CalculatorBrain.PropertyList?
     
@@ -66,6 +50,5 @@ class ViewController: UIViewController {
             brain.performOperation(symbol: mathematicalSymbol)
         }
         displayValue = brain.result
-        
     }
 }

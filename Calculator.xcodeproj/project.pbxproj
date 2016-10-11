@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21386A941DAD4C2500E906EB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21386A931DAD4C2500E906EB /* Extensions.swift */; };
 		96CA01A11DA23B650099E71B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CA01A01DA23B650099E71B /* AppDelegate.swift */; };
 		96CA01A31DA23B650099E71B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CA01A21DA23B650099E71B /* ViewController.swift */; };
 		96CA01A61DA23B650099E71B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CA01A41DA23B650099E71B /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21386A931DAD4C2500E906EB /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		96CA019D1DA23B650099E71B /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CA01A01DA23B650099E71B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96CA01A21DA23B650099E71B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				96CA01A71DA23B650099E71B /* Assets.xcassets */,
 				96CA01A91DA23B650099E71B /* LaunchScreen.storyboard */,
 				96CA01AC1DA23B650099E71B /* Info.plist */,
+				21386A931DAD4C2500E906EB /* Extensions.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -204,7 +207,7 @@
 				TargetAttributes = {
 					96CA019C1DA23B640099E71B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 46CT5D4L8X;
+						DevelopmentTeam = E5C2GPDY2X;
 						ProvisioningStyle = Automatic;
 					};
 					96CA01B01DA23B650099E71B = {
@@ -274,6 +277,7 @@
 				96CA01CF1DA24B330099E71B /* CalculatorBrain.swift in Sources */,
 				96CA01A31DA23B650099E71B /* ViewController.swift in Sources */,
 				96CA01A11DA23B650099E71B /* AppDelegate.swift in Sources */,
+				21386A941DAD4C2500E906EB /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 46CT5D4L8X;
+				DEVELOPMENT_TEAM = E5C2GPDY2X;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vhristozova;
@@ -436,7 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 46CT5D4L8X;
+				DEVELOPMENT_TEAM = E5C2GPDY2X;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vhristozova;
