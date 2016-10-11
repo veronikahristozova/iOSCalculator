@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,23 +17,34 @@
                         <viewControllerLayoutGuide type="bottom" id="gdG-f0-ied"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bD4-AZ-Xwq">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="dq5-k4-VNX">
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="WH8-9d-p51">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                    </constraint>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cWp-97-See" userLabel="Calculator">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HkS-Qn-hq4" userLabel="Row 1">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRn-Xm-PMK">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="π"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="performOperation:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="wuA-oR-SbX"/>
                                                 </connections>
@@ -41,6 +53,9 @@
                                                 <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="7"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="touchDigit:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="r4i-lE-OOC"/>
                                                 </connections>
@@ -49,6 +64,9 @@
                                                 <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="8"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="touchDigit:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="A9l-Vm-Tha"/>
                                                 </connections>
@@ -57,6 +75,9 @@
                                                 <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="9"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="touchDigit:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="Pd8-mx-taA"/>
                                                 </connections>
@@ -66,9 +87,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="byB-fy-pbm" userLabel="Row 2">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PN-yw-w7s">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="√"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="performOperation:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="34s-5d-X3v"/>
                                                 </connections>
@@ -77,6 +101,9 @@
                                                 <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="4"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="touchDigit:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="oAY-gZ-KyT"/>
                                                 </connections>
@@ -85,6 +112,9 @@
                                                 <color key="backgroundColor" red="0.74673477564102564" green="0.74673477564102564" blue="0.74673477564102564" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="5"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="touchDigit:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="tLG-TL-IBL"/>
                                                 </connections>
@@ -93,6 +123,9 @@
                                                 <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="6"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="touchDigit:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="KnT-FF-G7N"/>
                                                 </connections>
@@ -102,9 +135,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kJi-Hz-xxG" userLabel="Row 3">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vo-JI-sI3">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="save"/>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="save" destination="pwX-U0-2Q4" eventType="touchUpInside" id="59L-sC-wdB"/>
                                                 </connections>
@@ -113,6 +152,9 @@
                                                 <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="1"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="touchDigit:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="qJJ-xT-e43"/>
                                                 </connections>
@@ -121,6 +163,9 @@
                                                 <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="2"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="touchDigit:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="m3B-jZ-9D1"/>
                                                 </connections>
@@ -129,6 +174,9 @@
                                                 <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="3"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="touchDigit:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="aB7-k7-B3j"/>
                                                 </connections>
@@ -138,9 +186,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Z8k-1w-9hH" userLabel="Row 4">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0v-f8-LqQ">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="res"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="restore" destination="pwX-U0-2Q4" eventType="touchUpInside" id="rGj-3v-wZm"/>
                                                 </connections>
@@ -149,6 +200,9 @@
                                                 <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="."/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="touchDigit:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="KsI-vJ-qqB"/>
                                                 </connections>
@@ -157,14 +211,20 @@
                                                 <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="0"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="touchDigit:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="NyB-oM-6zt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1k-9B-FRj">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="="/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="performOperation:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="773-Gj-fAS"/>
                                                 </connections>
@@ -178,7 +238,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="xbf-gz-2Sb" userLabel="PlusMInus">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eT3-tO-VHd">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="÷"/>
                                                 <connections>
@@ -186,7 +246,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrR-Fo-cJ8">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="×"/>
                                                 <connections>
@@ -198,7 +258,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-sE-zLO" userLabel="C+-">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bc-G4-EBT">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="+"/>
                                                 <connections>
@@ -206,7 +266,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAx-Uf-DD3">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="−"/>
                                                 <connections>
@@ -214,7 +274,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiH-uq-1Kz">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="C"/>
                                                 <connections>
@@ -230,17 +290,23 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="JSM-sp-nYK" userLabel="PlusMInus">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTd-Y8-JYm">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="÷"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="performOperation:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="dNw-fz-Tif"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzg-2p-74f">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="×"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="performOperation:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="6mf-eY-4Xe"/>
                                                 </connections>
@@ -250,25 +316,34 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="OKx-5M-xTa" userLabel="C+-">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4L-HJ-UjD">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="+"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="performOperation:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="N3h-EH-o7Y"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CU-hb-oNj">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="−"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="performOperation:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="WqW-Io-cs7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqy-Y9-Tfx">
-                                                <color key="backgroundColor" red="0.74673477560000001" green="0.74673477560000001" blue="0.74673477560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="C"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="performOperation:" destination="pwX-U0-2Q4" eventType="touchUpInside" id="ynV-7r-FEU"/>
                                                 </connections>
@@ -280,11 +355,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="p0t-nW-zuN" firstAttribute="top" secondItem="dq5-k4-VNX" secondAttribute="bottom" constant="360" id="6Ta-eP-paG">
-                                <variation key="heightClass=regular" constant="8" symbolic="YES"/>
+                            <constraint firstItem="p0t-nW-zuN" firstAttribute="top" secondItem="dq5-k4-VNX" secondAttribute="bottom" constant="100" id="6Ta-eP-paG">
+                                <variation key="heightClass=regular" constant="10"/>
                             </constraint>
                             <constraint firstItem="DIO-aF-81w" firstAttribute="bottom" secondItem="cWp-97-See" secondAttribute="bottom" id="700-tr-oFr"/>
-                            <constraint firstItem="dq5-k4-VNX" firstAttribute="top" secondItem="6iQ-yl-EYV" secondAttribute="bottom" constant="5" id="8n0-uS-GqU"/>
+                            <constraint firstItem="dq5-k4-VNX" firstAttribute="top" secondItem="6iQ-yl-EYV" secondAttribute="bottom" constant="8" symbolic="YES" id="8n0-uS-GqU"/>
                             <constraint firstItem="p0t-nW-zuN" firstAttribute="trailing" secondItem="cWp-97-See" secondAttribute="trailing" id="8t2-nN-zbB"/>
                             <constraint firstItem="cWp-97-See" firstAttribute="leading" secondItem="bD4-AZ-Xwq" secondAttribute="leadingMargin" constant="721" id="ADp-Pl-eV7">
                                 <variation key="heightClass=regular" constant="0.0"/>
@@ -318,20 +393,20 @@
                                 <exclude reference="p0t-nW-zuN"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="6Ta-eP-paG"/>
-                                <exclude reference="8t2-nN-zbB"/>
-                                <exclude reference="gAq-PN-zld"/>
-                                <exclude reference="kas-Hy-ctL"/>
+                                <exclude reference="ADp-Pl-eV7"/>
+                                <exclude reference="svv-fZ-rSV"/>
+                                <exclude reference="uf3-AS-YoC"/>
+                                <exclude reference="wOU-ax-4aJ"/>
                                 <exclude reference="700-tr-oFr"/>
                                 <exclude reference="J4M-eY-5YY"/>
                                 <exclude reference="MaH-fW-Nfp"/>
                                 <exclude reference="VcP-Fh-jde"/>
                                 <exclude reference="XWl-of-YkG"/>
                                 <exclude reference="ln9-ja-E7k"/>
-                                <exclude reference="ADp-Pl-eV7"/>
-                                <exclude reference="svv-fZ-rSV"/>
-                                <exclude reference="uf3-AS-YoC"/>
-                                <exclude reference="wOU-ax-4aJ"/>
+                                <exclude reference="6Ta-eP-paG"/>
+                                <exclude reference="8t2-nN-zbB"/>
+                                <exclude reference="gAq-PN-zld"/>
+                                <exclude reference="kas-Hy-ctL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -339,14 +414,14 @@
                                 <include reference="DIO-aF-81w"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="svv-fZ-rSV"/>
+                                <include reference="wOU-ax-4aJ"/>
                                 <include reference="700-tr-oFr"/>
                                 <exclude reference="J4M-eY-5YY"/>
                                 <include reference="MaH-fW-Nfp"/>
                                 <include reference="VcP-Fh-jde"/>
                                 <exclude reference="XWl-of-YkG"/>
                                 <include reference="ln9-ja-E7k"/>
-                                <include reference="svv-fZ-rSV"/>
-                                <include reference="wOU-ax-4aJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -354,12 +429,12 @@
                                 <include reference="p0t-nW-zuN"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="ADp-Pl-eV7"/>
+                                <include reference="uf3-AS-YoC"/>
                                 <include reference="6Ta-eP-paG"/>
                                 <include reference="8t2-nN-zbB"/>
                                 <include reference="gAq-PN-zld"/>
                                 <include reference="kas-Hy-ctL"/>
-                                <include reference="ADp-Pl-eV7"/>
-                                <include reference="uf3-AS-YoC"/>
                             </mask>
                         </variation>
                     </view>
@@ -369,7 +444,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4b9-Md-kOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100" y="12.143928035982009"/>
+            <point key="canvasLocation" x="100" y="11.71875"/>
         </scene>
     </scenes>
 </document>

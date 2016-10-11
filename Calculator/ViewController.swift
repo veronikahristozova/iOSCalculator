@@ -10,13 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    
-    
-    
     @IBOutlet weak var display: UILabel!
     
     var userIsInTheMiddleOfTyping = false
+    var savedProgram: CalculatorBrain.PropertyList?
+    private var brain = CalculatorBrain()
+    
+    var displayValue : Double {
+        get {
+            return convertStringToDouble(decimalAsString: display.text!)
+        }
+        set {
+            let a = newValue.truncatingRemainder(dividingBy: 1) == 0 ? String(Int(newValue)) : String(newValue)
+//            let formatter = NumberFormatter()
+//            formatter.numberStyle = .decimal
+//            formatter.string(from: NSNumber(value: Double(a)!))
+//            display.text?.replacingOccurrences(of: ",", with: "")
+            display.text = a
+        }
+    }
     
     
     @IBAction func touchDigit(_ sender: UIButton) {
@@ -25,23 +37,10 @@ class ViewController: UIViewController {
             let currentlyInDislay = display.text!
             display.text = currentlyInDislay + digit
         } else {
-            display!.text = digit
+            display.text = digit
         }
         userIsInTheMiddleOfTyping = true
     }
-    
-    var displayValue : Double  {
-        get {
-            return Double(display.text!)!
-        }
-        set {
-            let a = newValue.truncatingRemainder(dividingBy: 1) == 0 ? String(Int(newValue)) : String(newValue)
-            
-            display.text = a
-        }
-    }
-    
-    var savedProgram: CalculatorBrain.PropertyList?
     
     @IBAction func save() {
         savedProgram = brain.program
@@ -54,7 +53,16 @@ class ViewController: UIViewController {
         }
     }
     
-    private var brain = CalculatorBrain()
+    func convertStringToDouble(decimalAsString: String) -> Double {
+        let formatter = NumberFormatter()
+        formatter.groupingSeparator = " "
+        formatter.numberStyle = .decimal
+        var decimalAsDouble = formatter.number(from: decimalAsString)?.doubleValue
+        if let decimalAsDoubleUnwrapped = formatter.number(from: decimalAsString) {
+            decimalAsDouble = decimalAsDoubleUnwrapped.doubleValue
+        }
+        return decimalAsDouble!
+    }
     
     
     @IBAction func performOperation(_ sender: UIButton) {
