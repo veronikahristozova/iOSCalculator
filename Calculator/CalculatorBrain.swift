@@ -84,7 +84,10 @@ class CalculatorBrain
                 executingPendingBinaryOperation()
                 pending = PendingBinaryOperationInfo(binaryFunction: function, firstOperand: accumulator)
             case .Equals : executingPendingBinaryOperation()
-            case .Clear : accumulator = 0
+            case .Clear :
+                internalProgram.removeAll()
+                pending = nil
+                accumulator = 0
             }
         }
     }
