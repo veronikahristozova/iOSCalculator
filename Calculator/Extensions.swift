@@ -10,13 +10,11 @@ import Foundation
 
 // MARK: Decimal Formatting of Double
 extension Double {
+    
     mutating func appendDigit(digit: String) {
         let truncatedValue = self.truncatingRemainder(dividingBy: 1) == 0 ? String(Int(self)) : String(self)
         if let k = Double("\(truncatedValue)\(digit)") { self = k }
     }
-    
-    // TODO: Implement the removal of the last digit, just for fun
-    // mutating func truncateDigit() { ... }
     
     mutating func removeDigit() {
         var truncatedValue = self.truncatingRemainder(dividingBy: 1) == 0 ? String(Int(self)) : String(self)

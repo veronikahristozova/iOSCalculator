@@ -14,7 +14,12 @@ class ViewController: UIViewController {
     
     var userIsInTheMiddleOfTyping = false
     var dotTypped = false
+    var displayValue : Double = 0 { didSet { display.text = displayValue.decimalFormatted } }
+    var savedProgram: CalculatorBrain.PropertyList?
     
+    private var brain = CalculatorBrain()
+
+
     @IBAction func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
         if userIsInTheMiddleOfTyping { displayValue.appendDigit(digit: dotTypped ? ".\(digit)" : digit) }
@@ -22,10 +27,6 @@ class ViewController: UIViewController {
         userIsInTheMiddleOfTyping = true
         dotTypped = digit == "."
     }
-    
-    var displayValue : Double = 0 { didSet { display.text = displayValue.decimalFormatted } }
-    
-    var savedProgram: CalculatorBrain.PropertyList?
     
     @IBAction func save() {
         savedProgram = brain.program
@@ -37,9 +38,6 @@ class ViewController: UIViewController {
             displayValue = brain.result
         }
     }
-    
-    private var brain = CalculatorBrain()
-    
     
     @IBAction func performOperation(_ sender: UIButton) {
         if userIsInTheMiddleOfTyping {
@@ -53,12 +51,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func swipeToDelete(_ sender: UISwipeGestureRecognizer) {
-        deleteLastDigit()
-    }
-    
-    private func deleteLastDigit() {
-        if displayValue != 0 {
-            displayValue.removeDigit()
-        }
+        displayValue.removeDigit()
     }
 }
