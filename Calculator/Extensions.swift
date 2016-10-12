@@ -18,6 +18,14 @@ extension Double {
     // TODO: Implement the removal of the last digit, just for fun
     // mutating func truncateDigit() { ... }
     
+    mutating func removeDigit() {
+        var truncatedValue = self.truncatingRemainder(dividingBy: 1) == 0 ? String(Int(self)) : String(self)
+        if !truncatedValue.isEmpty {
+            truncatedValue = truncatedValue.substring(to: truncatedValue.index(before: truncatedValue.endIndex))
+            if let k = Double("\(truncatedValue)") { self = k }
+        }
+    }
+    
     var decimalFormatted: String {
         get {
             let formatter = NumberFormatter()

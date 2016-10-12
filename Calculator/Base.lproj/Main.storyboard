@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,14 +17,18 @@
                         <viewControllerLayoutGuide type="bottom" id="gdG-f0-ied"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bD4-AZ-Xwq">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="dq5-k4-VNX">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="dq5-k4-VNX">
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UQP-cK-VNE" appends="YES" id="XaO-6M-mrq"/>
+                                </connections>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cWp-97-See" userLabel="Calculator">
                                 <subviews>
@@ -318,20 +323,20 @@
                                 <exclude reference="p0t-nW-zuN"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="6Ta-eP-paG"/>
-                                <exclude reference="8t2-nN-zbB"/>
-                                <exclude reference="gAq-PN-zld"/>
-                                <exclude reference="kas-Hy-ctL"/>
+                                <exclude reference="ADp-Pl-eV7"/>
+                                <exclude reference="svv-fZ-rSV"/>
+                                <exclude reference="uf3-AS-YoC"/>
+                                <exclude reference="wOU-ax-4aJ"/>
                                 <exclude reference="700-tr-oFr"/>
                                 <exclude reference="J4M-eY-5YY"/>
                                 <exclude reference="MaH-fW-Nfp"/>
                                 <exclude reference="VcP-Fh-jde"/>
                                 <exclude reference="XWl-of-YkG"/>
                                 <exclude reference="ln9-ja-E7k"/>
-                                <exclude reference="ADp-Pl-eV7"/>
-                                <exclude reference="svv-fZ-rSV"/>
-                                <exclude reference="uf3-AS-YoC"/>
-                                <exclude reference="wOU-ax-4aJ"/>
+                                <exclude reference="6Ta-eP-paG"/>
+                                <exclude reference="8t2-nN-zbB"/>
+                                <exclude reference="gAq-PN-zld"/>
+                                <exclude reference="kas-Hy-ctL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -339,14 +344,14 @@
                                 <include reference="DIO-aF-81w"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="svv-fZ-rSV"/>
+                                <include reference="wOU-ax-4aJ"/>
                                 <include reference="700-tr-oFr"/>
                                 <exclude reference="J4M-eY-5YY"/>
                                 <include reference="MaH-fW-Nfp"/>
                                 <include reference="VcP-Fh-jde"/>
                                 <exclude reference="XWl-of-YkG"/>
                                 <include reference="ln9-ja-E7k"/>
-                                <include reference="svv-fZ-rSV"/>
-                                <include reference="wOU-ax-4aJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -354,12 +359,12 @@
                                 <include reference="p0t-nW-zuN"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="ADp-Pl-eV7"/>
+                                <include reference="uf3-AS-YoC"/>
                                 <include reference="6Ta-eP-paG"/>
                                 <include reference="8t2-nN-zbB"/>
                                 <include reference="gAq-PN-zld"/>
                                 <include reference="kas-Hy-ctL"/>
-                                <include reference="ADp-Pl-eV7"/>
-                                <include reference="uf3-AS-YoC"/>
                             </mask>
                         </variation>
                     </view>
@@ -368,6 +373,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4b9-Md-kOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="UQP-cK-VNE">
+                    <connections>
+                        <action selector="swipeToDelete:" destination="pwX-U0-2Q4" id="Qze-XB-eno"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="100" y="12.143928035982009"/>
         </scene>

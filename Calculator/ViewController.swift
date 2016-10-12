@@ -51,4 +51,14 @@ class ViewController: UIViewController {
         }
         displayValue = brain.result
     }
+    
+    @IBAction func swipeToDelete(_ sender: UISwipeGestureRecognizer) {
+        deleteLastDigit()
+    }
+    
+    private func deleteLastDigit() {
+        if displayValue != 0 {
+            displayValue.removeDigit()
+        }
+    }
 }
