@@ -8,8 +8,12 @@
 
 import Foundation
 
-func multiply(op1 : Double, op2 : Double) -> Double {
-    return op1*op2
+func divide(op1 : Double, op2 : Double) -> Double {
+    if op2 == 0 {
+        return 0
+    } else {
+        return op1/op2
+    }
 }
 
 enum Operation {
@@ -57,7 +61,7 @@ class CalculatorBrain
         "√" : Operation.UnaryOperation(sqrt),
         "cos" : Operation.UnaryOperation(cos),
         "×" : Operation.BinaryOperation({ $0*$1 }),
-        "÷" : Operation.BinaryOperation({ $0/$1 }),
+        "÷" : Operation.BinaryOperation(divide),
         "+" : Operation.BinaryOperation({ $0+$1 }),
         "−" : Operation.BinaryOperation({ $0-$1 }),
         "=" : Operation.Equals,
@@ -91,8 +95,4 @@ class CalculatorBrain
             pending = nil
         }
     }
-    func Truncate(acc: Double){
-        
-    }
-    
 }

@@ -323,16 +323,16 @@
                                 <exclude reference="p0t-nW-zuN"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="ADp-Pl-eV7"/>
-                                <exclude reference="svv-fZ-rSV"/>
-                                <exclude reference="uf3-AS-YoC"/>
-                                <exclude reference="wOU-ax-4aJ"/>
                                 <exclude reference="700-tr-oFr"/>
                                 <exclude reference="J4M-eY-5YY"/>
                                 <exclude reference="MaH-fW-Nfp"/>
                                 <exclude reference="VcP-Fh-jde"/>
                                 <exclude reference="XWl-of-YkG"/>
                                 <exclude reference="ln9-ja-E7k"/>
+                                <exclude reference="ADp-Pl-eV7"/>
+                                <exclude reference="svv-fZ-rSV"/>
+                                <exclude reference="uf3-AS-YoC"/>
+                                <exclude reference="wOU-ax-4aJ"/>
                                 <exclude reference="6Ta-eP-paG"/>
                                 <exclude reference="8t2-nN-zbB"/>
                                 <exclude reference="gAq-PN-zld"/>
@@ -344,14 +344,14 @@
                                 <include reference="DIO-aF-81w"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="svv-fZ-rSV"/>
-                                <include reference="wOU-ax-4aJ"/>
                                 <include reference="700-tr-oFr"/>
                                 <exclude reference="J4M-eY-5YY"/>
                                 <include reference="MaH-fW-Nfp"/>
                                 <include reference="VcP-Fh-jde"/>
                                 <exclude reference="XWl-of-YkG"/>
                                 <include reference="ln9-ja-E7k"/>
+                                <include reference="svv-fZ-rSV"/>
+                                <include reference="wOU-ax-4aJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
