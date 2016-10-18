@@ -12,17 +12,21 @@ import Foundation
 extension Double {
     
     mutating func appendDigit(digit: String) {
+        guard self < Double(Int.max) else { return }
         let truncatedValue = self.truncatingRemainder(dividingBy: 1) == 0 ? String(Int(self)) : String(self)
         if let k = Double("\(truncatedValue)\(digit)") { self = k }
     }
     
     mutating func removeDigit() {
+        guard self < Double(Int.max) else { return }
         var truncatedValue = self.truncatingRemainder(dividingBy: 1) == 0 ? String(Int(self)) : String(self)
         if !truncatedValue.isEmpty {
             truncatedValue = truncatedValue.substring(to: truncatedValue.index(before: truncatedValue.endIndex))
             if let k = Double("\(truncatedValue)") { self = k }
         }
     }
+    
+    
     
     var decimalFormatted: String {
         get {
