@@ -15,6 +15,7 @@ extension Double {
         guard self < Double(Int.max) else { return }
         let truncatedValue = self.truncatingRemainder(dividingBy: 1) == 0 ? String(Int(self)) : String(self)
         if let k = Double("\(truncatedValue)\(digit)") { self = k }
+        print(self)
     }
     
     mutating func removeDigit() {
@@ -25,8 +26,6 @@ extension Double {
             if let k = Double("\(truncatedValue)") { self = k }
         }
     }
-    
-    
     
     var decimalFormatted: String {
         get {
